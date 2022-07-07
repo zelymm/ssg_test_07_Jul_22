@@ -3,17 +3,24 @@ import java.util.Scanner;
 
 public class App {
     public void run() {
-        System.out.println("== 명언 SSG ==");
+        System.out.println("== The Quotes SSG ==");
 
         Scanner sc = new Scanner(System.in);
 
         outer:
         while (true) {
-            System.out.printf("명령) ");
+            System.out.printf("Input) ");
             String cmd = sc.nextLine().trim();
 
             switch (cmd) {
-                case "종료":
+                case "insert":
+                    System.out.printf("Quote : ");
+                    String content = sc.nextLine().trim();
+                    System.out.printf("Author : ");
+                    String author = sc.nextLine().trim();
+                    System.out.println("The quote has been registered.");
+                    break;
+                case "finish":
                     break outer;
             }
         }
