@@ -23,6 +23,10 @@ public class App {
                     System.out.printf("Author : ");
                     String author = sc.nextLine().trim();
                     int id = ++wiseSayingLastId; //명언 글 번호 증가
+
+                    WiseSaying wiseSaying = new WiseSaying(id, content, author);
+                    System.out.println(wiseSaying);
+
                     System.out.printf("No.%d quote has been registered, successfully.\n", id);
                     break;
                 case "finish":
