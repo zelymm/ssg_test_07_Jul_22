@@ -7,8 +7,12 @@ public class App {
 
         Scanner sc = new Scanner(System.in);
 
+        //가장 마지막 명언글의 번호
+        int wiseSayingLastId = 0;
+
         outer:
         while (true) {
+
             System.out.printf("Input) ");
             String cmd = sc.nextLine().trim();
 
@@ -18,7 +22,8 @@ public class App {
                     String content = sc.nextLine().trim();
                     System.out.printf("Author : ");
                     String author = sc.nextLine().trim();
-                    System.out.println("The quote has been registered.");
+                    int id = ++wiseSayingLastId; //명언 글 번호 증가
+                    System.out.printf("No.%d quote has been registered, successfully.\n", id);
                     break;
                 case "finish":
                     break outer;
