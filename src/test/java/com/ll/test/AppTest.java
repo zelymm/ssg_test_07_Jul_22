@@ -10,16 +10,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AppTest {
     @Test
     public void Rq__getPath() {
-        Rq rq = new Rq("삭제?id=1");
+        Rq rq = new Rq("delete?id=1");
 
         String path = rq.getPath();
 
-        assertEquals("삭제", path);
+        assertEquals("delete", path);
     }
 
     @Test
     public void Rq__getIntParam() {
-        Rq rq = new Rq("삭제?id=1");
+        Rq rq = new Rq("delete?id=1");
 
         int id = rq.getIntParam("id", 0);
 
@@ -28,7 +28,7 @@ public class AppTest {
 
     @Test
     public void Rq__getIntParam__2() {
-        Rq rq = new Rq("검색?id=10&no=1");
+        Rq rq = new Rq("list?id=10&no=1");
 
         int id = rq.getIntParam("id", 0);
         int no = rq.getIntParam("no", 0);
